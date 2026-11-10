@@ -1,0 +1,5 @@
+{ "name": "agentic-ai-testing-roadmap", "private": true,
+  "scripts": { "test": "./run_all.sh", "test:day1": "PYTHONPATH=. python3 -m unittest discover -s day-1-tool-contracts ",
+  "test:day2": "PYTHONPATH=. python3 -m unittest discover -s day-2-trajectory-eval ", "test:day3": "PYTHONPATH=. python3 -m unittest discover -s day-3-mcp-server -t .",
+  "test:day4": "PYTHONPATH=. python3 -m unittest discover -s day-4-red-teaming ", "test:day5": "PYTHONPATH=. python3 -m unittest discover -s day-5-multi-agent -t .",
+  "test:day6": "PYTHONPATH=. python3 -m unittest discover -s day-6-budgets ", "test:day7": "python3 day-7-ci-gate/gate.py" } }

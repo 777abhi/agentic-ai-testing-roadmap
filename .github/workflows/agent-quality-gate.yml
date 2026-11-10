@@ -1,0 +1,13 @@
+name: agent-quality-gate
+on: [push, pull_request]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python day-7-ci-gate/gate.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: gate-report, path: gate-report.json }
